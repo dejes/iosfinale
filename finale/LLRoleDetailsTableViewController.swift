@@ -1,42 +1,74 @@
 //
-//  LLCharacterTableViewController.swift
+//  LLRoleDetailsTableViewController.swift
 //  finale
 //
-//  Created by User18 on 2019/6/12.
+//  Created by User23 on 2019/6/13.
 //  Copyright © 2019 jackliu. All rights reserved.
 //
 
 import UIKit
 
-class LLCharacterTableViewController: UITableViewController {
-    @IBOutlet var charactername: [UILabel]!
-    var generation:String?
-    var gener=["μ's","Aqours"]
-  
-    var aqourscharacter=["Ruby Kurosawa"]
+class LLRoleDetailsTableViewController: UITableViewController {
+    var NameNo:Int?
+    var japaneseName:String?
+    @IBOutlet weak var jp_name_label: UILabel!
+    @IBOutlet weak var name_label: UILabel!
+    @IBOutlet weak var age_label: UILabel!
+    @IBOutlet weak var birthday_label: UILabel!
+    @IBOutlet weak var unit_label: UILabel!
+    @IBOutlet weak var subunit_label: UILabel!
+    @IBOutlet weak var height_label: UILabel!
+    @IBOutlet weak var seiyu_label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let generation=generation{
-            if generation==gener[0]{
-                var i = 0
-                for label in charactername {
-                    label.text = musecharacter[i]
-                    print(musecharacter[i])
-                    i = i + 1
+        let hyperlink="http://schoolido.lu/api/idols/"
+        if let url=URL(string: hyperlink + musecharacterapi[NameNo!]+"/"){
+            print(url)
+            let task=URLSession.shared.dataTask(with: url){
+                (data,response,error) in
+                let decoder=JSONDecoder()
+                if let data=data,let roleDetail=try? decoder.decode(RoleDetail.self, from: data){
+                    
+                    DispatchQueue.main.async {
+                        self.jp_name_label.text = roleDetail.japanese_name
+                        self.name_label.text="Name:"+roleDetail.name
+                        self.age_label.text="Age:"+String(roleDetail.age)
+                        self.birthday_label.text="Birthday:"+roleDetail.birthday
+                        self.unit_label.text="Unit:"+roleDetail.main_unit
+                        self.subunit_label.text="Sub Unit:"+roleDetail.sub_unit
+                        self.tableView.reloadData()
+                    }
                 }
-            }
+                else{
+                    print("errorin")
+                }
+                           }
+            task.resume()
+            
+            
         }
-        
+        else{
+            print(musecharacter[NameNo!])
+            print("error")
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    
     // MARK: - Table view data source
 
-   
+    /*override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 0
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return 0
+    }*/
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -83,18 +115,14 @@ class LLCharacterTableViewController: UITableViewController {
     }
     */
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        let destinationController=segue.destination as? LLRoleDetailsTableViewController
-        if let identifier=segue.identifier,let RoleNameNo=Int(identifier){
-            destinationController?.NameNo=RoleNameNo
-        }
     }
-    
+    */
 
 }
