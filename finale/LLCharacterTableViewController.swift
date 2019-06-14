@@ -11,19 +11,62 @@ import UIKit
 class LLCharacterTableViewController: UITableViewController {
     @IBOutlet var charactername: [UILabel]!
     var generation:String?
-    var gener=["μ's","Aqours"]
-  
-    var aqourscharacter=["Ruby Kurosawa"]
+    
+    var im = [URL]()
+    @IBOutlet var chibiimg: [UIImageView]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //let hyperlink="http://schoolido.lu/api/idols/"
+        self.title=generation
+        
         if let generation=generation{
             if generation==gener[0]{
                 var i = 0
+                //var r=0
                 for label in charactername {
                     label.text = musecharacter[i]
+                    /*print(i)
+                    if let url=URL(string: hyperlink + musecharacterapi[i]+"/"){
+                        print(url)
+                        
+                        let task=URLSession.shared.dataTask(with: url){
+                            (data,response,error) in
+                            let decoder=JSONDecoder()
+                            print(i)
+
+                            if let data=data,let roleDetail=try? decoder.decode(RoleDetail.self, from: data){
+                                if let imgdata=try? Data (contentsOf: roleDetail.chibi_small){
+                                    DispatchQueue.main.async {
+                                        print("r:",r)
+                                        print("inmain:",roleDetail.chibi_small)
+                                        //self.chibiimg[r].image=UIImage(data:imgdata)
+                                        self.tableView.reloadData()
+                                        r=r+1
+                                    }
+                                }
+                                else{
+                                    print("error")
+                                }
+                            }
+                            else{
+                                print("errorin")
+                            }
+                        }
+                        task.resume()
+                    }*/
                     print(musecharacter[i])
                     i = i + 1
                 }
+            }
+            else if generation==gener[1]{
+                var i=0
+                for label in charactername{
+                    label.text=aqourscharacter[i]
+                    i=i+1
+                }
+                
+                
             }
         }
         
@@ -93,6 +136,7 @@ class LLCharacterTableViewController: UITableViewController {
         let destinationController=segue.destination as? LLRoleDetailsTableViewController
         if let identifier=segue.identifier,let RoleNameNo=Int(identifier){
             destinationController?.NameNo=RoleNameNo
+            destinationController?.generati0n=generation
         }
     }
     

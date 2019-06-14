@@ -10,6 +10,7 @@ import UIKit
 
 class LLRoleDetailsTableViewController: UITableViewController {
     var NameNo:Int?
+    var generati0n:String?
     var japaneseName:String?
     @IBOutlet weak var jp_name_label: UILabel!
     @IBOutlet weak var name_label: UILabel!
@@ -23,41 +24,68 @@ class LLRoleDetailsTableViewController: UITableViewController {
     @IBOutlet weak var Chibi_img: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let hyperlink="http://schoolido.lu/api/idols/"
-        if let url=URL(string: hyperlink + musecharacterapi[NameNo!]+"/"){
-            print(url)
-            let task=URLSession.shared.dataTask(with: url){
-                (data,response,error) in
-                let decoder=JSONDecoder()
-                if let data=data,let roleDetail=try? decoder.decode(RoleDetail.self, from: data){
-                    if let imgdata=try? Data (contentsOf: roleDetail.chibi){
-                        DispatchQueue.main.async {
-                            self.Chibi_img.image=UIImage(data: imgdata)
-                            self.jp_name_label.text = roleDetail.japanese_name
-                            self.name_label.text="Name: "+roleDetail.name
-                            self.age_label.text="Age: "+String(roleDetail.age)
-                            self.birthday_label.text="Birthday: "+roleDetail.birthday
-                            self.unit_label.text="Unit: "+roleDetail.main_unit
-                            self.subunit_label.text="Sub Unit: "+roleDetail.sub_unit
-                            self.height_label.text="Height: "+String(roleDetail.height)+" cm"
-                            self.cv_label.text="CV: "+roleDetail.cv.name
-                            self.year_label.text="Grade:"+roleDetail.year+" grade"
-                            self.tableView.reloadData()
+        if generati0n==gener[0]{
+            if let url=URL(string: hyperlink + musecharacterapi[NameNo!]+"/"){
+                print(url)
+                self.title=musecharacter[NameNo!]
+                let task=URLSession.shared.dataTask(with: url){
+                    (data,response,error) in
+                    let decoder=JSONDecoder()
+                    if let data=data,let roleDetail=try? decoder.decode(RoleDetail.self, from: data){
+                        if let imgdata=try? Data (contentsOf: roleDetail.chibi){
+                            DispatchQueue.main.async {
+                                self.Chibi_img.image=UIImage(data: imgdata)
+                                self.jp_name_label.text = roleDetail.japanese_name
+                                self.name_label.text="Name: "+roleDetail.name
+                                self.age_label.text="Age: "+String(roleDetail.age)
+                                self.birthday_label.text="Birthday: "+roleDetail.birthday
+                                self.unit_label.text="Unit: "+roleDetail.main_unit
+                                self.subunit_label.text="Sub Unit: "+roleDetail.sub_unit
+                                self.height_label.text="Height: "+String(roleDetail.height)+" cm"
+                                self.cv_label.text="CV: "+roleDetail.cv.name
+                                self.year_label.text="Grade:"+roleDetail.year+" grade"
+                                self.tableView.reloadData()
+                            }
+                        }
+                        
+                    }
+                }
+                task.resume()
+            }
+        }
+        
+        else if generati0n==gener[1] {
+            if let url=URL(string: hyperlink + aqourscharacterapi[NameNo!]+"/"){
+                self.title=aqourscharacter[NameNo!]
+                print(url)
+                let task=URLSession.shared.dataTask(with: url){
+                    (data,response,error) in
+                    let decoder=JSONDecoder()
+                    if let data=data,let roleDetail=try? decoder.decode(AqoursRoleDetail.self, from: data){
+                        if let imgdata=try? Data (contentsOf: roleDetail.chibi){
+                            DispatchQueue.main.async {
+                                self.Chibi_img.image=UIImage(data: imgdata)
+                                self.jp_name_label.text = roleDetail.japanese_name
+                                self.name_label.text="Name: "+roleDetail.name
+                                self.age_label.text="measurements: "+String(roleDetail.measurements)
+                                self.birthday_label.text="Birthday: "+roleDetail.birthday
+                                self.unit_label.text="Unit: "+roleDetail.main_unit
+                                self.subunit_label.text="Sub Unit: "+roleDetail.sub_unit
+                                self.height_label.text="Height: "+String(roleDetail.height)+" cm"
+                                self.cv_label.text="CV: "+roleDetail.cv.name
+                                self.year_label.text="Grade:"+roleDetail.year+" grade"
+                                self.tableView.reloadData()
+                            }
                         }
                     }
-                    
+                    else{
+                        print("errorin")
+                    }
                 }
-                else{
-                    print("errorin")
-                }
-                           }
-            task.resume()
-            
-            
-        }
-        else{
-            print(musecharacter[NameNo!])
-            print("error")
+                task.resume()
+            }
         }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
