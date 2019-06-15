@@ -68,5 +68,8 @@ struct Tracks:Codable {
     var previewUrl:URL?
     var trackId:Int?
     var artworkUrl100:URL?
-    
+    var releaseDate:String?
+    var currency:String?
+    var trackPrice:Int?
+    var trackViewUrl:URL?
 }

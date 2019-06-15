@@ -34,6 +34,27 @@ class AlbumTableViewController: UITableViewController {
             }
             
         }
+        else if self.tabBarItem.title=="Aqours"{
+            let hyperlink="https://itunes.apple.com/lookup?id=1045917820&entity=album"
+            
+            if let url=URL(string:hyperlink){
+                let task=URLSession.shared.dataTask(with: url){
+                    (data,response,error) in
+                    let decoder=JSONDecoder()
+                    if let data=data,let songResults=try? decoder.decode(SongResults.self, from: data){
+                        
+                        self.song=songResults.results
+                        self.song.remove(at: 0)
+                        DispatchQueue.main.async {
+                            self.tableView.reloadData()
+                        }
+                        
+                    }
+                }
+                task.resume()
+            }
+            
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
