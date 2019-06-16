@@ -10,6 +10,52 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Saved Songs-->
+        <scene sceneID="su7-ws-oOI">
+            <objects>
+                <tableViewController id="f3u-ni-kyp" customClass="SaveTableViewController" customModule="finale" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ack-1S-S0a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SaveCell" rowHeight="90" id="1f2-N3-SzV" customClass="SaveTableViewCell" customModule="finale" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1f2-N3-SzV" id="wU3-5c-oWa">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VJn-EC-zon">
+                                            <rect key="frame" x="20" y="7" width="75" height="75"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ci8-fK-pxF">
+                                            <rect key="frame" x="138" y="22" width="225" height="45"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="SaveTrackImage" destination="VJn-EC-zon" id="WQ8-5T-rpN"/>
+                                    <outlet property="SaveTrackName" destination="ci8-fK-pxF" id="b3B-Sx-SEM"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="f3u-ni-kyp" id="8ix-Ry-dzQ"/>
+                            <outlet property="delegate" destination="f3u-ni-kyp" id="EyN-hD-08b"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Saved Songs" id="pnj-Bj-4lf"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="twC-f1-CoC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="657" y="-579"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -32,6 +78,14 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="wiq-WR-sxw" kind="show" id="2Pm-zB-1wv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gN9-tX-TpT">
+                                <rect key="frame" x="93" y="452" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="f3u-ni-kyp" kind="show" id="LAE-PA-6zs"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -832,11 +886,18 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="MMR-f2-Oha">
-                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="oYe-hZ-ZdS">
-                            <connections>
-                                <action selector="playmusic:" destination="5Ud-jB-thx" id="MGS-qV-tsj"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="play" id="oYe-hZ-ZdS">
+                                <connections>
+                                    <action selector="playmusic:" destination="5Ud-jB-thx" id="MGS-qV-tsj"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Save" id="ZFI-B2-qxm">
+                                <connections>
+                                    <action selector="SaveSong:" destination="5Ud-jB-thx" id="1RB-kj-sW9"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -1020,7 +1081,7 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="dna-ve-QzJ">
-                            <rect key="frame" x="0.0" y="432" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="432" width="414" height="64"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
@@ -1071,11 +1132,18 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="Bux-bi-GKK">
-                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="a5S-Fn-uPY">
-                            <connections>
-                                <action selector="playmusic:" destination="u5N-zo-eHX" id="StB-pt-l2E"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="play" id="a5S-Fn-uPY">
+                                <connections>
+                                    <action selector="playmusic:" destination="u5N-zo-eHX" id="StB-pt-l2E"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Save" id="p3K-Ke-eLR">
+                                <connections>
+                                    <action selector="SaveSong:" destination="u5N-zo-eHX" id="Mea-Yu-9G3"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -1088,7 +1156,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="30d-W5-WeG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3406" y="1588"/>
+            <point key="canvasLocation" x="3405.7971014492755" y="1587.7232142857142"/>
         </scene>
     </scenes>
     <resources>

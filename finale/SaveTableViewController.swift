@@ -1,5 +1,5 @@
 //
-//  TrackDetailsTableViewController.swift
+//  SaveTableViewController.swift
 //  finale
 //
 //  Created by User18 on 2019/6/16.
@@ -7,40 +7,16 @@
 //
 
 import UIKit
-import AVKit
 
-class TrackDetailsTableViewController: UITableViewController {
-    var SaveTrack:Tracks!
-    var SaveTracks:[Tracks]?
-    var trackD:Tracks?
-    var player:AVPlayer?
-    @IBOutlet weak var TrackName: UILabel!
-    @IBOutlet weak var TrackArtist: UILabel!
-    @IBOutlet weak var TrackImage: UIImageView!
-    
-    @IBOutlet var DetailsLabel: [UILabel]!
-    
+class SaveTableViewController: UITableViewController {
+    var track=[Tracks]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        if let trackD=trackD{
-            SaveTrack=Tracks(wrapperType: trackD.wrapperType, trackName: trackD.trackName, artistName: trackD.artistName, previewUrl: trackD.previewUrl, trackId: trackD.trackId, artworkUrl100: trackD.artworkUrl100, releaseDate: trackD.releaseDate, currency: trackD.currency, trackPrice: trackD.trackPrice, trackViewUrl: trackD.trackViewUrl)
-            
-            navigationItem.title=trackD.trackName
-            TrackName.text=trackD.trackName
-            TrackArtist.text=trackD.artistName
-           
-            let task = URLSession.shared.dataTask(with: trackD.artworkUrl100!) { (data, response , error) in
-                if let data = data {
-                    DispatchQueue.main.async {
-                        self.TrackImage.image=UIImage(data: data)
-                        self.DetailsLabel[0].text="releaseDate: " + trackD.releaseDate!
-                        self.DetailsLabel[1].text="Price: "+String(trackD.trackPrice!)+" "+trackD.currency!
-                    }
-                }
-            }
-            task.resume()
+        let indexpath=IndexPath(row: 0, section: 0)
+        tableView.insertRows(at: [indexpath], with: .automatic)
+        if let track=Tracks.readLoversFromFile(){
+            self.track=track
         }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -48,33 +24,34 @@ class TrackDetailsTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-    @IBAction func SaveSong(_ sender: Any) {
-        SaveTracks?.insert(SaveTrack, at: 0)
-        print(SaveTrack)
-        print(SaveTracks)
-        Tracks.saveToFile(track: SaveTracks!)
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        track.remove(at: indexPath.row)
+        
+        Tracks.saveToFile(track: track)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
     }
-    
     // MARK: - Table view data source
 
-    /*override func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
-    }*/
+        return 1
+    }
 
-   /* override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
-    }*/
+        return track.count
+    }
 
     
-    /*override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TrackDetails", for: indexPath) as! TrackDetailsTableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SaveCell", for: indexPath) as! SaveTableViewCell
 
         // Configure the cell...
-        cell.TrackDetailsLabel.text=
+        let tracksss=track[indexPath.row]
+        cell.SaveTrackName.text=tracksss.trackName
         return cell
-    }*/
+    }
     
 
     /*
@@ -84,15 +61,7 @@ class TrackDetailsTableViewController: UITableViewController {
         return true
     }
     */
-    
-    @IBAction func playmusic(_ sender: Any) {
-        if let url = trackD?.previewUrl {
-            player = AVPlayer(url: url)
-            print(url)
-            player?.play()
-            
-        }
-    }
+
     /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -130,5 +99,4 @@ class TrackDetailsTableViewController: UITableViewController {
     }
     */
 
-    
 }

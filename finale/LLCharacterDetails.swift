@@ -72,4 +72,31 @@ struct Tracks:Codable {
     var currency:String?
     var trackPrice:Int?
     var trackViewUrl:URL?
+    
+    static let documentsDirectory=FileManager.default.urls(for: .documentDirectory , in: .userDomainMask).first!
+    
+    static func saveToFile(track: [Tracks]) {
+        let propertyEncoder = PropertyListEncoder()
+        if let data = try? propertyEncoder.encode(track) {
+            let url = Tracks.documentsDirectory.appendingPathComponent("track").appendingPathExtension("plist")
+            try? data.write(to: url)
+        }
+    }
+    static func readLoversFromFile() -> [Tracks]? {
+        let propertyDecoder = PropertyListDecoder()
+        let url = Tracks.documentsDirectory.appendingPathComponent("track").appendingPathExtension("plist")
+        if let data = try? Data(contentsOf: url), let track = try? propertyDecoder.decode([Tracks].self, from: data) {
+            return track
+        }
+        else {
+            return nil
+        }
+    }
+    
 }
+
+
+
+
+
+

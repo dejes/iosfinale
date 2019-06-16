@@ -17,6 +17,8 @@
 		450B2BA422B1059C0011724C /* LLGenerationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B2BA322B1059C0011724C /* LLGenerationTableViewController.swift */; };
 		450B2BA622B10BD70011724C /* LLCharacterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B2BA522B10BD70011724C /* LLCharacterTableViewController.swift */; };
 		450B2BA822B10C100011724C /* LLCharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B2BA722B10C100011724C /* LLCharacterTableViewCell.swift */; };
+		45243AFB22B67961004D9AF4 /* SaveTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45243AFA22B67961004D9AF4 /* SaveTableViewController.swift */; };
+		45243AFD22B679B7004D9AF4 /* SaveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45243AFC22B679B7004D9AF4 /* SaveTableViewCell.swift */; };
 		45B9631022B5639A00FDE045 /* TrackDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B9630F22B5639A00FDE045 /* TrackDetailsTableViewController.swift */; };
 		45B9631222B563C600FDE045 /* TrackDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B9631122B563C600FDE045 /* TrackDetailsTableViewCell.swift */; };
 		45CDD1EB22B524FF0016E351 /* AlbumTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CDD1EA22B524FF0016E351 /* AlbumTableViewController.swift */; };
@@ -38,6 +40,8 @@
 		450B2BA322B1059C0011724C /* LLGenerationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLGenerationTableViewController.swift; sourceTree = "<group>"; };
 		450B2BA522B10BD70011724C /* LLCharacterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLCharacterTableViewController.swift; sourceTree = "<group>"; };
 		450B2BA722B10C100011724C /* LLCharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLCharacterTableViewCell.swift; sourceTree = "<group>"; };
+		45243AFA22B67961004D9AF4 /* SaveTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveTableViewController.swift; sourceTree = "<group>"; };
+		45243AFC22B679B7004D9AF4 /* SaveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveTableViewCell.swift; sourceTree = "<group>"; };
 		45B9630F22B5639A00FDE045 /* TrackDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrackDetailsTableViewController.swift; path = finale/TrackDetailsTableViewController.swift; sourceTree = "<group>"; };
 		45B9631122B563C600FDE045 /* TrackDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrackDetailsTableViewCell.swift; path = finale/TrackDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		45CDD1EA22B524FF0016E351 /* AlbumTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 				45CDD1EA22B524FF0016E351 /* AlbumTableViewController.swift */,
 				359CF7BE22B2790600B1816E /* LLRoleDetailsTableViewController.swift */,
 				359CF7C022B27C9800B1816E /* LLCharacterDetails.swift */,
+				45243AFA22B67961004D9AF4 /* SaveTableViewController.swift */,
+				45243AFC22B679B7004D9AF4 /* SaveTableViewCell.swift */,
 				45CDD1F022B53D3D0016E351 /* AlbumDetailsTableViewController.swift */,
 				45CDD1F222B53D7B0016E351 /* AlbumDetailsTableViewCell.swift */,
 				450B2BA522B10BD70011724C /* LLCharacterTableViewController.swift */,
@@ -168,10 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45243AFD22B679B7004D9AF4 /* SaveTableViewCell.swift in Sources */,
 				450B2B9422B0FF080011724C /* ViewController.swift in Sources */,
 				45CDD1F122B53D3D0016E351 /* AlbumDetailsTableViewController.swift in Sources */,
 				45CDD1EB22B524FF0016E351 /* AlbumTableViewController.swift in Sources */,
 				45CDD1F322B53D7B0016E351 /* AlbumDetailsTableViewCell.swift in Sources */,
+				45243AFB22B67961004D9AF4 /* SaveTableViewController.swift in Sources */,
 				450B2BA822B10C100011724C /* LLCharacterTableViewCell.swift in Sources */,
 				450B2B9222B0FF080011724C /* AppDelegate.swift in Sources */,
 				45B9631022B5639A00FDE045 /* TrackDetailsTableViewController.swift in Sources */,
