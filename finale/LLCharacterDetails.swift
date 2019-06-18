@@ -37,7 +37,7 @@ struct AqoursRoleDetail:Codable{
 struct cv:Codable {
     var name:String
 }
-
+var SaveTracks=[Tracks]()
 var gener=["μ's","Aqours"]
 var musecharacter = ["Hoshizora Rin","Nishikino Maki","Koizumi Hanayo","Kousaka Honoka","Sonoda Umi","Minami Kotori"," Ayase Eli","Yazawa Nico","Toujou Nozomi"]
 var musecharacterapi = ["Hoshizora%20Rin","Nishikino%20Maki","Koizumi%20Hanayo","Kousaka%20Honoka","Sonoda%20Umi","Minami%20Kotori","Ayase%20Eli","Yazawa%20Nico","Toujou%20Nozomi"]
@@ -92,7 +92,7 @@ struct Tracks:Codable {
             return nil
         }
     }
-    
+    ///Users/user18/Library/Developer/CoreSimulator/Devices/AE0DD0E8-166D-431B-AA7C-C3173A97B451/data/Containers/Data/Application/86CDE463-437E-4573-A3EE-5E04E7898C19/Documents/track.plist
 }
 
 

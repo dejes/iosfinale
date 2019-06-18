@@ -12,11 +12,13 @@ class SaveTableViewController: UITableViewController {
     var track=[Tracks]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let indexpath=IndexPath(row: 0, section: 0)
-        tableView.insertRows(at: [indexpath], with: .automatic)
+        print("123")
+        /*let indexpath=IndexPath(row: 0, section: 0)
+        tableView.insertRows(at: [indexpath], with: .automatic)*/
         if let track=Tracks.readLoversFromFile(){
+            print("123")
             self.track=track
+            print(track)
         }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -27,7 +29,7 @@ class SaveTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         track.remove(at: indexPath.row)
-        
+        SaveTracks.remove(at: indexPath.row)
         Tracks.saveToFile(track: track)
         tableView.deleteRows(at: [indexPath], with: .automatic)
     }
@@ -46,10 +48,19 @@ class SaveTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SaveCell", for: indexPath) as! SaveTableViewCell
-
+        
         // Configure the cell...
         let tracksss=track[indexPath.row]
-        cell.SaveTrackName.text=tracksss.trackName
+        let task=URLSession.shared.dataTask(with: tracksss.artworkUrl100!) { (data, response , error) in
+            if let data = data {
+                DispatchQueue.main.async {
+                   cell.SaveTrackName.text=tracksss.trackName
+                    cell.SaveTrackImage.image=UIImage(data: data)
+                }
+            }
+        }
+        task.resume()
+        
         return cell
     }
     
@@ -89,14 +100,18 @@ class SaveTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if let row = tableView.indexPathForSelectedRow?.row{
+            let controller=segue.destination as? TrackDetailsTableViewController
+            controller?.trackD=track[row]
+        }
     }
-    */
+ 
 
 }

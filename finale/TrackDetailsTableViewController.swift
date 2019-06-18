@@ -11,7 +11,7 @@ import AVKit
 
 class TrackDetailsTableViewController: UITableViewController {
     var SaveTrack:Tracks!
-    var SaveTracks:[Tracks]?
+    
     var trackD:Tracks?
     var player:AVPlayer?
     @IBOutlet weak var TrackName: UILabel!
@@ -49,10 +49,10 @@ class TrackDetailsTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     @IBAction func SaveSong(_ sender: Any) {
-        SaveTracks?.insert(SaveTrack, at: 0)
-        print(SaveTrack)
-        print(SaveTracks)
-        Tracks.saveToFile(track: SaveTracks!)
+        SaveTracks.insert(SaveTrack, at: 0)
+        
+        print(SaveTracks[0])
+        Tracks.saveToFile(track: SaveTracks)
     }
     
     // MARK: - Table view data source
