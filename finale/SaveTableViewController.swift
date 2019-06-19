@@ -16,7 +16,7 @@ class SaveTableViewController: UITableViewController {
         /*let indexpath=IndexPath(row: 0, section: 0)
         tableView.insertRows(at: [indexpath], with: .automatic)*/
         if let track=Tracks.readLoversFromFile(){
-            print("123")
+            print(track)
             self.track=track
             print(track)
         }
@@ -51,11 +51,18 @@ class SaveTableViewController: UITableViewController {
         
         // Configure the cell...
         let tracksss=track[indexPath.row]
-        let task=URLSession.shared.dataTask(with: tracksss.artworkUrl100!) { (data, response , error) in
+        //cell.SaveTrackName.text=tracksss.trackName
+        /*let documentDirectory=FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+        let imageurl=documentDirectory?.appendingPathComponent(tracksss)*/
+        //let documentDir
+       let task=URLSession.shared.dataTask(with: tracksss.artworkUrl100!) { (data, response , error) in
             if let data = data {
                 DispatchQueue.main.async {
-                   cell.SaveTrackName.text=tracksss.trackName
+         
+                    print(tracksss.trackName)
+                    cell.SaveTrackName.text=tracksss.trackName
                     cell.SaveTrackImage.image=UIImage(data: data)
+                    
                 }
             }
         }

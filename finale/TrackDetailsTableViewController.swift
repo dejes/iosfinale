@@ -49,8 +49,18 @@ class TrackDetailsTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     @IBAction func SaveSong(_ sender: Any) {
+       /* let SaveImageName=UUID().uuidString
+        let SaveImageData=TrackImage.image?.jpegData(compressionQuality: 0.8)
+        let SaveUrl=Tracks.documentsDirectory.appendingPathComponent(SaveImageName).appendingPathComponent("jpeg")
+        do{
+            try? SaveImageData?.write(to: SaveUrl)
+           
+        } catch {
+            print("failed")
+        }
+        SaveTrack.artworkUrl100=SaveUrl*/
         SaveTracks.insert(SaveTrack, at: 0)
-        
+
         print(SaveTracks[0])
         Tracks.saveToFile(track: SaveTracks)
     }
