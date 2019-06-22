@@ -72,7 +72,7 @@ struct Tracks:Codable {
     var currency:String?
     var trackPrice:Int?
     var trackViewUrl:URL?
-    
+    var Saveimagename:String?
     static let documentsDirectory=FileManager.default.urls(for: .documentDirectory , in: .userDomainMask).first!
     
     static func saveToFile(track: [Tracks]) {

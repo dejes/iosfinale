@@ -25,7 +25,7 @@ class TrackDetailsTableViewController: UITableViewController {
         
         
         if let trackD=trackD{
-            SaveTrack=Tracks(wrapperType: trackD.wrapperType, trackName: trackD.trackName, artistName: trackD.artistName, previewUrl: trackD.previewUrl, trackId: trackD.trackId, artworkUrl100: trackD.artworkUrl100, releaseDate: trackD.releaseDate, currency: trackD.currency, trackPrice: trackD.trackPrice, trackViewUrl: trackD.trackViewUrl)
+            SaveTrack=Tracks(wrapperType: trackD.wrapperType, trackName: trackD.trackName, artistName: trackD.artistName, previewUrl: trackD.previewUrl, trackId: trackD.trackId, artworkUrl100: trackD.artworkUrl100, releaseDate: trackD.releaseDate, currency: trackD.currency, trackPrice: trackD.trackPrice, trackViewUrl: trackD.trackViewUrl, Saveimagename:trackD.Saveimagename)
             
             navigationItem.title=trackD.trackName
             TrackName.text=trackD.trackName
@@ -49,16 +49,18 @@ class TrackDetailsTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     @IBAction func SaveSong(_ sender: Any) {
-       /* let SaveImageName=UUID().uuidString
+        let SaveImageName=UUID().uuidString
         let SaveImageData=TrackImage.image?.jpegData(compressionQuality: 0.8)
-        let SaveUrl=Tracks.documentsDirectory.appendingPathComponent(SaveImageName).appendingPathComponent("jpeg")
+        print(SaveImageName)
+        let SaveUrl=Tracks.documentsDirectory.appendingPathComponent(SaveImageName).appendingPathExtension("jpeg")
         do{
             try? SaveImageData?.write(to: SaveUrl)
            
         } catch {
             print("failed")
         }
-        SaveTrack.artworkUrl100=SaveUrl*/
+        SaveTrack.Saveimagename=SaveImageName
+        print(SaveTrack.Saveimagename)
         SaveTracks.insert(SaveTrack, at: 0)
 
         print(SaveTracks[0])

@@ -42,7 +42,7 @@
                                 <connections>
                                     <outlet property="SaveTrackImage" destination="VJn-EC-zon" id="WQ8-5T-rpN"/>
                                     <outlet property="SaveTrackName" destination="ci8-fK-pxF" id="b3B-Sx-SEM"/>
-                                    <segue destination="mUi-0b-IjB" kind="show" id="Dcw-v9-G1A"/>
+                                    <segue destination="mUi-0b-IjB" kind="show" id="FYa-ZX-Xll"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -65,26 +65,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="law-XH-QNW">
-                                <rect key="frame" x="93" y="215" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="law-XH-QNW">
+                                <rect key="frame" x="20" y="131" width="180" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Button" image="下載"/>
                                 <connections>
                                     <segue destination="jiZ-rZ-WKB" kind="show" id="Yyv-Cb-9fo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLl-YF-czO">
-                                <rect key="frame" x="263" y="215" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLl-YF-czO">
+                                <rect key="frame" x="204" y="131" width="180" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Button" backgroundImage="200px-CD_autolev_crop"/>
                                 <connections>
                                     <segue destination="wiq-WR-sxw" kind="show" id="2Pm-zB-1wv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gN9-tX-TpT">
-                                <rect key="frame" x="93" y="452" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zti-EP-X1q">
+                                <rect key="frame" x="214" y="329" width="180" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="ChangeButtonImg:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tMj-RW-jaq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gN9-tX-TpT">
+                                <rect key="frame" x="16" y="319" width="180" height="180"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" backgroundImage="save-icon-3"/>
                                 <connections>
                                     <segue destination="f3u-ni-kyp" kind="show" id="LAE-PA-6zs"/>
                                 </connections>
@@ -94,6 +102,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="bSt-eA-M8b"/>
+                    <connections>
+                        <outlet property="photoButton" destination="Zti-EP-X1q" id="gZh-jZ-t5u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -716,7 +727,7 @@
                             <outlet property="delegate" destination="pn4-Rh-14a" id="ZDI-BO-hKX"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="μ's" id="UQJ-Iw-c7y"/>
+                    <tabBarItem key="tabBarItem" title="μ's" selectedImage="1200px-Μ's_logo.svg" id="UQJ-Iw-c7y"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vZf-fO-QQH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -962,11 +973,11 @@
                             <outlet property="delegate" destination="3BS-7V-qiM" id="wus-nc-Nds"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Aqours" id="Z9n-Ik-RRE"/>
+                    <tabBarItem key="tabBarItem" title="Aqours" selectedImage="Aqours_Logo" id="Z9n-Ik-RRE"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="byG-dz-Zg7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1403" y="1589"/>
+            <point key="canvasLocation" x="1391" y="1651"/>
         </scene>
         <!--Title-->
         <scene sceneID="6PZ-qi-HGz">
@@ -1047,7 +1058,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fm6-9K-xEI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2394" y="1588"/>
+            <point key="canvasLocation" x="2381" y="1651"/>
         </scene>
         <!--Title-->
         <scene sceneID="3NS-KB-TiH">
@@ -1157,12 +1168,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="30d-W5-WeG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3405.7971014492755" y="1587.7232142857142"/>
+            <point key="canvasLocation" x="3394" y="1651"/>
         </scene>
         <!--Title-->
         <scene sceneID="FVW-l2-yJJ">
             <objects>
-                <tableViewController id="mUi-0b-IjB" customClass="TrackDetailsTableViewController" customModule="finale" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="mUi-0b-IjB" customClass="SaveDetailsTableViewController" customModule="finale" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="66" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="1" id="xiW-yP-t8m">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1242,20 +1253,14 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="wtW-Nl-dPX">
-                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="DcB-wX-20G">
-                            <connections>
-                                <action selector="playmusic:" destination="mUi-0b-IjB" id="DZx-DH-3w1"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Title" id="wtW-Nl-dPX"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="TrackArtist" destination="fPw-hI-qSL" id="EvE-4o-Z62"/>
-                        <outlet property="TrackImage" destination="Cfk-fd-t1d" id="X9h-6R-YMZ"/>
-                        <outlet property="TrackName" destination="Ry6-Gm-jHo" id="CGD-ap-rJQ"/>
-                        <outletCollection property="DetailsLabel" destination="7Hu-iH-gTM" collectionClass="NSMutableArray" id="gZe-B7-GSB"/>
-                        <outletCollection property="DetailsLabel" destination="rYh-eo-gDv" collectionClass="NSMutableArray" id="HwK-UR-d4e"/>
+                        <outlet property="SavePrice" destination="rYh-eo-gDv" id="t0K-Ys-pEW"/>
+                        <outlet property="SaveReleaseTime" destination="7Hu-iH-gTM" id="FOv-Ln-Rp7"/>
+                        <outlet property="SaveTrackArtist" destination="fPw-hI-qSL" id="EOh-je-BzM"/>
+                        <outlet property="SaveTrackImage" destination="Cfk-fd-t1d" id="SxQ-kz-8TQ"/>
+                        <outlet property="SaveTrackName" destination="Ry6-Gm-jHo" id="8VD-BG-FTy"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckO-rN-tvS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1264,8 +1269,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1200px-Μ's_logo.svg" width="72" height="64"/>
+        <image name="200px-CD_autolev_crop" width="200" height="200"/>
+        <image name="Aqours_Logo" width="72" height="29"/>
         <image name="aqours" width="300" height="340"/>
+        <image name="save-icon-3" width="512" height="512"/>
         <image name="μ's" width="333" height="303"/>
+        <image name="下載" width="383" height="132"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="XOk-VV-8Hv"/>

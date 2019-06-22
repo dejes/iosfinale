@@ -16,9 +16,9 @@ class SaveTableViewController: UITableViewController {
         /*let indexpath=IndexPath(row: 0, section: 0)
         tableView.insertRows(at: [indexpath], with: .automatic)*/
         if let track=Tracks.readLoversFromFile(){
-            print(track)
+           
             self.track=track
-            print(track)
+            print(self.track)
         }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -51,22 +51,32 @@ class SaveTableViewController: UITableViewController {
         
         // Configure the cell...
         let tracksss=track[indexPath.row]
+        print(tracksss)
         //cell.SaveTrackName.text=tracksss.trackName
         /*let documentDirectory=FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
         let imageurl=documentDirectory?.appendingPathComponent(tracksss)*/
         //let documentDir
-       let task=URLSession.shared.dataTask(with: tracksss.artworkUrl100!) { (data, response , error) in
+      /* let task=URLSession.shared.dataTask(with: tracksss.artworkUrl100!) { (data, response , error) in
             if let data = data {
-                DispatchQueue.main.async {
+                DispatchQueue.main.async {*/
          
                     print(tracksss.trackName)
                     cell.SaveTrackName.text=tracksss.trackName
-                    cell.SaveTrackImage.image=UIImage(data: data)
+        print(tracksss.Saveimagename)
+        let imgurl=Tracks.documentsDirectory.appendingPathComponent(tracksss.Saveimagename!).appendingPathExtension("jpeg")
+        print(imgurl.path)
+        cell.SaveTrackImage.image=UIImage(contentsOfFile: imgurl.path)
+    /*let url=tracksss.artworkUrl100
+        
+            cell.SaveTrackImage.image=UIImage()*/
+        
+        
+        /*cell.SaveTrackImage.image=UIImage(data: data)*/
                     
-                }
+         /*       }
             }
         }
-        task.resume()
+        task.resume()*/
         
         return cell
     }
@@ -115,7 +125,7 @@ class SaveTableViewController: UITableViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         if let row = tableView.indexPathForSelectedRow?.row{
-            let controller=segue.destination as? TrackDetailsTableViewController
+            let controller=segue.destination as? SaveDetailsTableViewController
             controller?.trackD=track[row]
         }
     }
