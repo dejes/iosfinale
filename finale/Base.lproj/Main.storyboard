@@ -57,7 +57,7 @@
             </objects>
             <point key="canvasLocation" x="656.52173913043487" y="-579.24107142857144"/>
         </scene>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="finale" customModuleProvider="target" sceneMemberID="viewController">
@@ -66,42 +66,65 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="law-XH-QNW">
-                                <rect key="frame" x="20" y="131" width="180" height="180"/>
+                                <rect key="frame" x="20" y="131" width="374" height="151"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="下載"/>
+                                <state key="normal" backgroundImage="下載">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="jiZ-rZ-WKB" kind="show" id="Yyv-Cb-9fo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLl-YF-czO">
-                                <rect key="frame" x="204" y="131" width="180" height="200"/>
+                                <rect key="frame" x="214" y="358" width="180" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" backgroundImage="200px-CD_autolev_crop"/>
+                                <state key="normal" title="Button" image="10786b"/>
                                 <connections>
                                     <segue destination="wiq-WR-sxw" kind="show" id="2Pm-zB-1wv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zti-EP-X1q">
-                                <rect key="frame" x="214" y="329" width="180" height="180"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="ChangeButtonImg:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tMj-RW-jaq"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gN9-tX-TpT">
-                                <rect key="frame" x="16" y="319" width="180" height="180"/>
+                                <rect key="frame" x="20" y="358" width="180" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" backgroundImage="save-icon-3"/>
+                                <state key="normal" backgroundImage="save-icon-3"/>
                                 <connections>
                                     <segue destination="f3u-ni-kyp" kind="show" id="LAE-PA-6zs"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Character List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fec-Mr-CUF">
+                                <rect key="frame" x="153" y="282" width="116" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Saved Songs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeo-Mq-Vqz">
+                                <rect key="frame" x="57" y="538" width="106" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Songs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faV-77-ncE">
+                                <rect key="frame" x="278" y="538" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zti-EP-X1q">
+                                <rect key="frame" x="105" y="594" width="204" height="180"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Click me to change the image"/>
+                                <connections>
+                                    <action selector="ChangeButtonImg:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tMj-RW-jaq"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="bSt-eA-M8b"/>
+                    <navigationItem key="navigationItem" title="Home" id="M2Y-Kk-ddo"/>
                     <connections>
                         <outlet property="photoButton" destination="Zti-EP-X1q" id="gZh-jZ-t5u"/>
                     </connections>
@@ -727,7 +750,7 @@
                             <outlet property="delegate" destination="pn4-Rh-14a" id="ZDI-BO-hKX"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="μ's" selectedImage="1200px-Μ's_logo.svg" id="UQJ-Iw-c7y"/>
+                    <tabBarItem key="tabBarItem" title="μ's" image="1200px-Μ's_logo.svg" id="UQJ-Iw-c7y"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vZf-fO-QQH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -801,9 +824,7 @@
                             <outlet property="delegate" destination="YJM-Te-Zsy" id="Oqd-kp-0Ed"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="Gd5-Tw-YL5">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="oew-7W-NRZ"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Title" id="Gd5-Tw-YL5"/>
                     <connections>
                         <outlet property="ArtistName" destination="CIf-4A-byF" id="FI5-q4-NeY"/>
                         <outlet property="SongImage" destination="VJm-gF-Afw" id="yOJ-4O-Ess"/>
@@ -973,7 +994,7 @@
                             <outlet property="delegate" destination="3BS-7V-qiM" id="wus-nc-Nds"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Aqours" selectedImage="Aqours_Logo" id="Z9n-Ik-RRE"/>
+                    <tabBarItem key="tabBarItem" title="Aqours" image="Aqours_Logo" selectedImage="Aqours_Logo" id="Z9n-Ik-RRE"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="byG-dz-Zg7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1047,9 +1068,7 @@
                             <outlet property="delegate" destination="aZq-jE-yn5" id="RWb-VM-1CR"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="Mbh-dF-WdQ">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="bpm-bo-mCX"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Title" id="Mbh-dF-WdQ"/>
                     <connections>
                         <outlet property="ArtistName" destination="mOZ-TD-gmt" id="8dM-S9-eL6"/>
                         <outlet property="SongImage" destination="Ihj-Zg-j9Z" id="WVH-xN-FUB"/>
@@ -1269,8 +1288,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="10786b" width="600" height="600"/>
         <image name="1200px-Μ's_logo.svg" width="72" height="64"/>
-        <image name="200px-CD_autolev_crop" width="200" height="200"/>
         <image name="Aqours_Logo" width="72" height="29"/>
         <image name="aqours" width="300" height="340"/>
         <image name="save-icon-3" width="512" height="512"/>
