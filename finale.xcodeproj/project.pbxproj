@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AF1D37A4F0B25E85A89B635 /* Pods_finale.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41CAB85CA68254C2D73F17DE /* Pods_finale.framework */; };
 		359CF7BF22B2790600B1816E /* LLRoleDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359CF7BE22B2790600B1816E /* LLRoleDetailsTableViewController.swift */; };
 		359CF7C122B27C9800B1816E /* LLCharacterDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359CF7C022B27C9800B1816E /* LLCharacterDetails.swift */; };
 		450B2B9222B0FF080011724C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B2B9122B0FF080011724C /* AppDelegate.swift */; };
@@ -26,11 +27,14 @@
 		45CDD1ED22B527DC0016E351 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CDD1EC22B527DC0016E351 /* AlbumTableViewCell.swift */; };
 		45CDD1F122B53D3D0016E351 /* AlbumDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CDD1F022B53D3D0016E351 /* AlbumDetailsTableViewController.swift */; };
 		45CDD1F322B53D7B0016E351 /* AlbumDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CDD1F222B53D7B0016E351 /* AlbumDetailsTableViewCell.swift */; };
+		4B0F110F22BE65ED0049A599 /* YoutubeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F110E22BE65ED0049A599 /* YoutubeTableViewController.swift */; };
+		4B90B5F322BE7261006B03B7 /* YoutubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B90B5F222BE7261006B03B7 /* YoutubeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		359CF7BE22B2790600B1816E /* LLRoleDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLRoleDetailsTableViewController.swift; sourceTree = "<group>"; };
 		359CF7C022B27C9800B1816E /* LLCharacterDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLCharacterDetails.swift; sourceTree = "<group>"; };
+		41CAB85CA68254C2D73F17DE /* Pods_finale.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_finale.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		450B2B8E22B0FF080011724C /* finale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = finale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		450B2B9122B0FF080011724C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		450B2B9322B0FF080011724C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +54,10 @@
 		45CDD1EC22B527DC0016E351 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 		45CDD1F022B53D3D0016E351 /* AlbumDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailsTableViewController.swift; sourceTree = "<group>"; };
 		45CDD1F222B53D7B0016E351 /* AlbumDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		4B0F110E22BE65ED0049A599 /* YoutubeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeTableViewController.swift; sourceTree = "<group>"; };
+		4B90B5F222BE7261006B03B7 /* YoutubeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeViewController.swift; sourceTree = "<group>"; };
+		6DFE95D2C6084202B55076D0 /* Pods-finale.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-finale.release.xcconfig"; path = "Target Support Files/Pods-finale/Pods-finale.release.xcconfig"; sourceTree = "<group>"; };
+		FC06ECE027DD27AF132AF106 /* Pods-finale.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-finale.debug.xcconfig"; path = "Target Support Files/Pods-finale/Pods-finale.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +65,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AF1D37A4F0B25E85A89B635 /* Pods_finale.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1239B6801CA6522474924D20 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC06ECE027DD27AF132AF106 /* Pods-finale.debug.xcconfig */,
+				6DFE95D2C6084202B55076D0 /* Pods-finale.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		450B2B8522B0FF080011724C = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +88,8 @@
 				45B9631122B563C600FDE045 /* TrackDetailsTableViewCell.swift */,
 				450B2B9022B0FF080011724C /* finale */,
 				450B2B8F22B0FF080011724C /* Products */,
+				1239B6801CA6522474924D20 /* Pods */,
+				FECB4455CC3E768A1078F51D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +107,8 @@
 				450B2B9122B0FF080011724C /* AppDelegate.swift */,
 				450B2B9322B0FF080011724C /* ViewController.swift */,
 				450B2B9522B0FF080011724C /* Main.storyboard */,
+				4B0F110E22BE65ED0049A599 /* YoutubeTableViewController.swift */,
+				4B90B5F222BE7261006B03B7 /* YoutubeViewController.swift */,
 				45714BE422BE2707001F83E5 /* SaveDetailsTableViewController.swift */,
 				45CDD1EC22B527DC0016E351 /* AlbumTableViewCell.swift */,
 				45CDD1EA22B524FF0016E351 /* AlbumTableViewController.swift */,
@@ -106,6 +128,14 @@
 			path = finale;
 			sourceTree = "<group>";
 		};
+		FECB4455CC3E768A1078F51D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				41CAB85CA68254C2D73F17DE /* Pods_finale.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -113,9 +143,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 450B2BA022B0FF090011724C /* Build configuration list for PBXNativeTarget "finale" */;
 			buildPhases = (
+				08898E94E14E01854A00EA7B /* [CP] Check Pods Manifest.lock */,
 				450B2B8A22B0FF080011724C /* Sources */,
 				450B2B8B22B0FF080011724C /* Frameworks */,
 				450B2B8C22B0FF080011724C /* Resources */,
+				A3694986FDA284F7AE8FB41E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -172,6 +204,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		08898E94E14E01854A00EA7B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-finale-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3694986FDA284F7AE8FB41E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-finale/Pods-finale-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-finale/Pods-finale-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-finale/Pods-finale-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		450B2B8A22B0FF080011724C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -185,9 +259,11 @@
 				45243AFB22B67961004D9AF4 /* SaveTableViewController.swift in Sources */,
 				450B2BA822B10C100011724C /* LLCharacterTableViewCell.swift in Sources */,
 				450B2B9222B0FF080011724C /* AppDelegate.swift in Sources */,
+				4B90B5F322BE7261006B03B7 /* YoutubeViewController.swift in Sources */,
 				45B9631022B5639A00FDE045 /* TrackDetailsTableViewController.swift in Sources */,
 				359CF7C122B27C9800B1816E /* LLCharacterDetails.swift in Sources */,
 				45CDD1ED22B527DC0016E351 /* AlbumTableViewCell.swift in Sources */,
+				4B0F110F22BE65ED0049A599 /* YoutubeTableViewController.swift in Sources */,
 				45714BE522BE2707001F83E5 /* SaveDetailsTableViewController.swift in Sources */,
 				450B2BA422B1059C0011724C /* LLGenerationTableViewController.swift in Sources */,
 				45B9631222B563C600FDE045 /* TrackDetailsTableViewCell.swift in Sources */,
@@ -336,6 +412,7 @@
 		};
 		450B2BA122B0FF090011724C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC06ECE027DD27AF132AF106 /* Pods-finale.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -353,6 +430,7 @@
 		};
 		450B2BA222B0FF090011724C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DFE95D2C6084202B55076D0 /* Pods-finale.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

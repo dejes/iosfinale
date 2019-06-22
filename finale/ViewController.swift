@@ -8,13 +8,14 @@
 
 import UIKit
 
+
 class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     var track=[Tracks]()
     let imagepicker=UIImagePickerController()
     @IBOutlet weak var photoButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         // Do any additional setup after loading the view.
         if let track=Tracks.readLoversFromFile(){
             self.track=track

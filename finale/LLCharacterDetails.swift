@@ -92,9 +92,13 @@ struct Tracks:Codable {
             return nil
         }
     }
+  
     ///Users/user18/Library/Developer/CoreSimulator/Devices/AE0DD0E8-166D-431B-AA7C-C3173A97B451/data/Containers/Data/Application/86CDE463-437E-4573-A3EE-5E04E7898C19/Documents/track.plist
 }
-
+var ytvid=["Jz6OX8cYUFA","eVwdeIDjXeM"]
+var ytmvname=["夏色えがおで1,2,Jump!","HAPPY PARTY TRAIN"]
+//https://www.youtube.com/watch?v=Jz6OX8cYUFA natsuiro egao de 1,2,jump
+//https://www.youtube.com/watch?v=eVwdeIDjXeM happypartytrain
 
 
 
