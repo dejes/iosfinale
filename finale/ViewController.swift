@@ -13,9 +13,18 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     var track=[Tracks]()
     let imagepicker=UIImagePickerController()
     @IBOutlet weak var photoButton: UIButton!
+    @IBOutlet weak var CLlabel: UILabel!
+    @IBOutlet weak var SSlabel: UILabel!
+    @IBOutlet weak var Slabel: UILabel!
+    @IBOutlet weak var CIlabel: UILabel!
+    @IBOutlet weak var MVlabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        CLlabel.text=NSLocalizedString("Character List", comment: "")
+        Slabel.text=NSLocalizedString("Songs", comment: "")
+        SSlabel.text=NSLocalizedString("Saved Songs", comment: "")
+        CIlabel.text=NSLocalizedString("Click image to change it!", comment:"")
+        MVlabel.text=NSLocalizedString("View MV on YouTube", comment:"")
         // Do any additional setup after loading the view.
         if let track=Tracks.readLoversFromFile(){
             self.track=track

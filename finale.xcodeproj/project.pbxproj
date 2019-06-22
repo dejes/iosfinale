@@ -28,6 +28,7 @@
 		45CDD1F122B53D3D0016E351 /* AlbumDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CDD1F022B53D3D0016E351 /* AlbumDetailsTableViewController.swift */; };
 		45CDD1F322B53D7B0016E351 /* AlbumDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CDD1F222B53D7B0016E351 /* AlbumDetailsTableViewCell.swift */; };
 		4B0F110F22BE65ED0049A599 /* YoutubeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F110E22BE65ED0049A599 /* YoutubeTableViewController.swift */; };
+		4B17D24E22BE87AB004E181E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B17D25022BE87AB004E181E /* Localizable.strings */; };
 		4B90B5F322BE7261006B03B7 /* YoutubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B90B5F222BE7261006B03B7 /* YoutubeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,12 @@
 		45CDD1F022B53D3D0016E351 /* AlbumDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailsTableViewController.swift; sourceTree = "<group>"; };
 		45CDD1F222B53D7B0016E351 /* AlbumDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		4B0F110E22BE65ED0049A599 /* YoutubeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeTableViewController.swift; sourceTree = "<group>"; };
+		4B17D23C22BE83C5004E181E /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		4B17D23D22BE83C5004E181E /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		4B17D23E22BE83CA004E181E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		4B17D23F22BE83CA004E181E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		4B17D24F22BE87AB004E181E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4B17D25122BE87F8004E181E /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		4B90B5F222BE7261006B03B7 /* YoutubeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeViewController.swift; sourceTree = "<group>"; };
 		6DFE95D2C6084202B55076D0 /* Pods-finale.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-finale.release.xcconfig"; path = "Target Support Files/Pods-finale/Pods-finale.release.xcconfig"; sourceTree = "<group>"; };
 		FC06ECE027DD27AF132AF106 /* Pods-finale.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-finale.debug.xcconfig"; path = "Target Support Files/Pods-finale/Pods-finale.debug.xcconfig"; sourceTree = "<group>"; };
@@ -84,6 +91,7 @@
 		450B2B8522B0FF080011724C = {
 			isa = PBXGroup;
 			children = (
+				4B17D25022BE87AB004E181E /* Localizable.strings */,
 				45B9630F22B5639A00FDE045 /* TrackDetailsTableViewController.swift */,
 				45B9631122B563C600FDE045 /* TrackDetailsTableViewCell.swift */,
 				450B2B9022B0FF080011724C /* finale */,
@@ -180,6 +188,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hant",
+				ja,
 			);
 			mainGroup = 450B2B8522B0FF080011724C;
 			productRefGroup = 450B2B8F22B0FF080011724C /* Products */;
@@ -197,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				450B2B9C22B0FF090011724C /* LaunchScreen.storyboard in Resources */,
+				4B17D24E22BE87AB004E181E /* Localizable.strings in Resources */,
 				450B2B9922B0FF090011724C /* Assets.xcassets in Resources */,
 				450B2B9722B0FF080011724C /* Main.storyboard in Resources */,
 			);
@@ -279,6 +290,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				450B2B9622B0FF080011724C /* Base */,
+				4B17D23C22BE83C5004E181E /* zh-Hant */,
+				4B17D23E22BE83CA004E181E /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -287,8 +300,19 @@
 			isa = PBXVariantGroup;
 			children = (
 				450B2B9B22B0FF090011724C /* Base */,
+				4B17D23D22BE83C5004E181E /* zh-Hant */,
+				4B17D23F22BE83CA004E181E /* ja */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4B17D25022BE87AB004E181E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B17D24F22BE87AB004E181E /* en */,
+				4B17D25122BE87F8004E181E /* zh-Hant */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -298,6 +322,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -359,6 +384,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

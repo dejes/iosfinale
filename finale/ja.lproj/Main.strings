@@ -1,0 +1,186 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "0k5-R5-Ebu"; */
+"0k5-R5-Ebu.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "0vV-d3-AO6"; */
+"0vV-d3-AO6.text" = "Label";
+
+/* Class = "UILabel"; text = "HAPPY PARTY TRAIN"; ObjectID = "0x2-hM-IJK"; */
+"0x2-hM-IJK.text" = "HAPPY PARTY TRAIN";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "1hF-Lc-yvp"; */
+"1hF-Lc-yvp.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "4ks-I3-A7W"; */
+"4ks-I3-A7W.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "4na-bK-xfQ"; */
+"4na-bK-xfQ.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Stop"; ObjectID = "6gi-Z2-ISm"; */
+"6gi-Z2-ISm.normalTitle" = "Stop";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "77q-Rm-XCc"; */
+"77q-Rm-XCc.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "7Hu-iH-gTM"; */
+"7Hu-iH-gTM.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "7tS-mJ-wXu"; */
+"7tS-mJ-wXu.title" = "Title";
+
+/* Class = "UILabel"; text = "Click image to change it!"; ObjectID = "8vf-J4-Wac"; */
+"8vf-J4-Wac.text" = "Click image to change it!";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "9OF-tf-Tk9"; */
+"9OF-tf-Tk9.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "Bux-bi-GKK"; */
+"Bux-bi-GKK.title" = "Title";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "CIf-4A-byF"; */
+"CIf-4A-byF.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Cfj-bK-oP2"; */
+"Cfj-bK-oP2.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "G9L-jm-LoO"; */
+"G9L-jm-LoO.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "Gd5-Tw-YL5"; */
+"Gd5-Tw-YL5.title" = "Title";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "HNc-gX-LCL"; */
+"HNc-gX-LCL.text" = "Label";
+
+/* Class = "UILabel"; text = "View MV on YouTube"; ObjectID = "JfG-8i-tOo"; */
+"JfG-8i-tOo.text" = "View MV on YouTube";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "L69-Le-r7S"; */
+"L69-Le-r7S.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "LK9-Pf-amC"; */
+"LK9-Pf-amC.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Home"; ObjectID = "M2Y-Kk-ddo"; */
+"M2Y-Kk-ddo.title" = "Home";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "MMR-f2-Oha"; */
+"MMR-f2-Oha.title" = "Title";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "Mbh-dF-WdQ"; */
+"Mbh-dF-WdQ.title" = "Title";
+
+/* Class = "UILabel"; text = "Aqours"; ObjectID = "OOa-nF-cBf"; */
+"OOa-nF-cBf.text" = "Aqours";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "PcR-FR-k07"; */
+"PcR-FR-k07.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "QBh-la-NUb"; */
+"QBh-la-NUb.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "RNS-B1-b5H"; */
+"RNS-B1-b5H.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Rrh-bp-EfM"; */
+"Rrh-bp-EfM.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Ry6-Gm-jHo"; */
+"Ry6-Gm-jHo.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "μ's"; ObjectID = "UQJ-Iw-c7y"; */
+"UQJ-Iw-c7y.title" = "μ's";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "UcA-UK-uz3"; */
+"UcA-UK-uz3.text" = "Label";
+
+/* Class = "UILabel"; text = "夏色えがおで1,2,Jump!"; ObjectID = "VGb-qr-0sg"; */
+"VGb-qr-0sg.text" = "夏色えがおで1,2,Jump!";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Xvz-AR-PYp"; */
+"Xvz-AR-PYp.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Aqours"; ObjectID = "Z9n-Ik-RRE"; */
+"Z9n-Ik-RRE.title" = "Aqours";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "ZFI-B2-qxm"; */
+"ZFI-B2-qxm.title" = "Save";
+
+/* Class = "UILabel"; text = "μ's"; ObjectID = "abW-Dy-8OS"; */
+"abW-Dy-8OS.text" = "μ's";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "b7a-mE-FNm"; */
+"b7a-mE-FNm.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ci8-fK-pxF"; */
+"ci8-fK-pxF.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "fPw-hI-qSL"; */
+"fPw-hI-qSL.text" = "Label";
+
+/* Class = "UILabel"; text = "Songs"; ObjectID = "faV-77-ncE"; */
+"faV-77-ncE.text" = "Songs";
+
+/* Class = "UILabel"; text = "Character List"; ObjectID = "fec-Mr-CUF"; */
+"fec-Mr-CUF.text" = "Character List";
+
+/* Class = "UINavigationItem"; title = "View MV on YouTube"; ObjectID = "fhO-if-Qbz"; */
+"fhO-if-Qbz.title" = "View MV on YouTube";
+
+/* Class = "UIButton"; normalTitle = "Play"; ObjectID = "gTy-2W-3fG"; */
+"gTy-2W-3fG.normalTitle" = "Play";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "gms-HR-77I"; */
+"gms-HR-77I.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "hU1-gs-frc"; */
+"hU1-gs-frc.text" = "Label";
+
+/* Class = "UITableViewController"; title = "Main Units"; ObjectID = "jiZ-rZ-WKB"; */
+"jiZ-rZ-WKB.title" = "Main Units";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "kW0-Tb-VUF"; */
+"kW0-Tb-VUF.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "mOZ-TD-gmt"; */
+"mOZ-TD-gmt.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "mpw-KT-Qub"; */
+"mpw-KT-Qub.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Pause"; ObjectID = "oFh-vo-HBX"; */
+"oFh-vo-HBX.normalTitle" = "Pause";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "oLl-YF-czO"; */
+"oLl-YF-czO.normalTitle" = "Button";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "p3K-Ke-eLR"; */
+"p3K-Ke-eLR.title" = "Save";
+
+/* Class = "UINavigationItem"; title = "Saved Songs"; ObjectID = "pnj-Bj-4lf"; */
+"pnj-Bj-4lf.title" = "Saved Songs";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "rHt-YG-Ck1"; */
+"rHt-YG-Ck1.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "rYh-eo-gDv"; */
+"rYh-eo-gDv.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "vDP-Ia-zuS"; */
+"vDP-Ia-zuS.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "vsT-3l-Xf5"; */
+"vsT-3l-Xf5.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "wtW-Nl-dPX"; */
+"wtW-Nl-dPX.title" = "Title";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "yg4-WY-nIW"; */
+"yg4-WY-nIW.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "yie-XS-CHj"; */
+"yie-XS-CHj.text" = "Label";
+
+/* Class = "UILabel"; text = "Saved Songs"; ObjectID = "zeo-Mq-Vqz"; */
+"zeo-Mq-Vqz.text" = "Saved Songs";

@@ -148,6 +148,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="M2Y-Kk-ddo"/>
                     <connections>
+                        <outlet property="CIlabel" destination="8vf-J4-Wac" id="6yq-hM-y5y"/>
+                        <outlet property="CLlabel" destination="fec-Mr-CUF" id="Bbp-1Q-b7Z"/>
+                        <outlet property="MVlabel" destination="JfG-8i-tOo" id="qD9-uw-bpt"/>
+                        <outlet property="SSlabel" destination="zeo-Mq-Vqz" id="bzH-3J-K3N"/>
+                        <outlet property="Slabel" destination="faV-77-ncE" id="wx9-O7-9DJ"/>
                         <outlet property="photoButton" destination="Zti-EP-X1q" id="gZh-jZ-t5u"/>
                     </connections>
                 </viewController>
