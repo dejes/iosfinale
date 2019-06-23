@@ -59,7 +59,7 @@ class TrackDetailsTableViewController: UITableViewController {
         } catch {
             print("failed")
         }
-        let controller = UIAlertController(title: "Saved!", message: "The song you choose are already saved!", preferredStyle: .alert)
+        let controller = UIAlertController(title: NSLocalizedString("Saved!", comment: "") , message: NSLocalizedString("The song you choose are already saved!", comment: "") , preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         controller.addAction(okAction)
         present(controller, animated: true, completion: nil)
