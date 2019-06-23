@@ -12,6 +12,7 @@ import UIKit
 class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     var track=[Tracks]()
     let imagepicker=UIImagePickerController()
+    @IBOutlet weak var hometitle: UINavigationItem!
     @IBOutlet weak var photoButton: UIButton!
     @IBOutlet weak var CLlabel: UILabel!
     @IBOutlet weak var SSlabel: UILabel!
@@ -20,6 +21,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     @IBOutlet weak var MVlabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        hometitle.title=NSLocalizedString("Home", comment: "")
         CLlabel.text=NSLocalizedString("Character List", comment: "")
         Slabel.text=NSLocalizedString("Songs", comment: "")
         SSlabel.text=NSLocalizedString("Saved Songs", comment: "")

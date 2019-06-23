@@ -10,9 +10,11 @@ import UIKit
 
 class SaveTableViewController: UITableViewController {
     var track=[Tracks]()
+    @IBOutlet weak var savesongtitle: UINavigationItem!
     override func viewDidLoad() {
         super.viewDidLoad()
         print("123")
+        savesongtitle.title=NSLocalizedString("Saved Songs", comment: "")
         /*let indexpath=IndexPath(row: 0, section: 0)
         tableView.insertRows(at: [indexpath], with: .automatic)*/
         if let track=Tracks.readLoversFromFile(){

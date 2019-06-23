@@ -52,6 +52,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Saved Songs" id="pnj-Bj-4lf"/>
+                    <connections>
+                        <outlet property="savesongtitle" destination="pnj-Bj-4lf" id="5de-xs-jHk"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="twC-f1-CoC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -91,22 +94,15 @@
                                     <segue destination="f3u-ni-kyp" kind="show" id="LAE-PA-6zs"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Character List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fec-Mr-CUF">
-                                <rect key="frame" x="153" y="282" width="116" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Character List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fec-Mr-CUF">
+                                <rect key="frame" x="20" y="282" width="374" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Saved Songs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeo-Mq-Vqz">
-                                <rect key="frame" x="57" y="546" width="106" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Songs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faV-77-ncE">
-                                <rect key="frame" x="278" y="546" width="52" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Songs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faV-77-ncE">
+                                <rect key="frame" x="214" y="557" width="180" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -135,8 +131,15 @@
                                     <segue destination="xF1-9T-9u2" kind="show" id="Vco-MX-nbG"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="View MV on YouTube" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfG-8i-tOo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="View MV on YouTube" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfG-8i-tOo">
                                 <rect key="frame" x="219" y="799" width="170" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Saved Songs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeo-Mq-Vqz">
+                                <rect key="frame" x="20" y="557" width="180" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -153,6 +156,7 @@
                         <outlet property="MVlabel" destination="JfG-8i-tOo" id="qD9-uw-bpt"/>
                         <outlet property="SSlabel" destination="zeo-Mq-Vqz" id="bzH-3J-K3N"/>
                         <outlet property="Slabel" destination="faV-77-ncE" id="wx9-O7-9DJ"/>
+                        <outlet property="hometitle" destination="M2Y-Kk-ddo" id="dg3-Bh-iEv"/>
                         <outlet property="photoButton" destination="Zti-EP-X1q" id="gZh-jZ-t5u"/>
                     </connections>
                 </viewController>
@@ -836,6 +840,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="View MV on YouTube" id="fhO-if-Qbz"/>
+                    <connections>
+                        <outlet property="localtitle" destination="fhO-if-Qbz" id="rsb-aU-JHS"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IRy-KQ-TxZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -910,6 +917,7 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="μ's" image="1200px-Μ's_logo.svg" id="UQJ-Iw-c7y"/>
+                    <navigationItem key="navigationItem" title="μ's" id="5TI-zC-4uU"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vZf-fO-QQH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

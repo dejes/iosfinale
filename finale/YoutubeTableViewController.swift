@@ -11,9 +11,11 @@ import YouTubePlayer_Swift
 
 class YoutubeTableViewController: UITableViewController {
 
+   
+    @IBOutlet weak var localtitle: UINavigationItem!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        localtitle.title=NSLocalizedString("View MV on YouTube", comment: "")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

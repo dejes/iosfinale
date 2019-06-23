@@ -59,6 +59,10 @@ class TrackDetailsTableViewController: UITableViewController {
         } catch {
             print("failed")
         }
+        let controller = UIAlertController(title: "Saved!", message: "The song you choose are already saved!", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        controller.addAction(okAction)
+        present(controller, animated: true, completion: nil)
         SaveTrack.Saveimagename=SaveImageName
         print(SaveTrack.Saveimagename)
         SaveTracks.insert(SaveTrack, at: 0)
